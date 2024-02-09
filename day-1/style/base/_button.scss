@@ -1,0 +1,12 @@
+@mixin btnStyle ($px:15px, $py:10px, $font:16px, $radius:6px) {
+    padding: $py $px;
+    font-size: $font;
+    border-radius: $radius;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin btnColor ($bg:blue, $color:white){
+    background-color: $bg;
+    color: $color;
+}

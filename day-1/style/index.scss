@@ -1,0 +1,25 @@
+@forward "./base/reset";
+@use "./utils/colors";
+@use "./base/button" as btn;
+
+.contaienr{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    .btn{
+        @include btn.btnStyle(15px, 10px, 16px,6px);
+    }
+    .btnlg{
+        @include btn.btnStyle(30px, 15px, 20px,10px);
+    }
+    .button1{
+        @include btn.btnColor(colors.$secondaryColor, colors.$primaryColor);
+    }
+    .button2{
+        @include btn.btnColor(colors.$primaryColor, colors.$secondaryColor);
+    }
+    .button3{
+        @include btn.btnColor(orange, white);
+        background: purple;
+    }
+}

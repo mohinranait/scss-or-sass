@@ -1,0 +1,96 @@
+.btn, .authNav li a.login, .btns {
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 1px #ddd;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: purple;
+}
+
+.btn-hover, .authNav li a.login:hover, .nav li a:hover, .authNav li a:hover {
+  background-color: red;
+  color: white;
+  transition: all 0.2s;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  box-shadow: 0px 0px 1px 1px gray;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+}
+
+.nav, .authNav {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+.nav li a, .authNav li a {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.authNav li a.login {
+  font-size: 16px;
+  font-weight: 700;
+}
+.authNav li a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: red;
+}
+
+.btns {
+  border: transparent;
+}
+.btns-success {
+  background-color: rgb(3, 144, 83);
+  color: white;
+}
+.btns-dark {
+  background-color: black;
+  color: white;
+}
+.btns-purple {
+  background-color: purple;
+  color: white;
+}
+.btns-small {
+  padding: 7px 10px;
+  font-size: 13px;
+}
+.btns-large {
+  padding: 14px 20px;
+  font-size: 17px;
+}
+.btns-extralarge {
+  padding: 18px 25px;
+  font-size: 18px;
+}/*# sourceMappingURL=index.css.map */
