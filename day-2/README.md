@@ -1,4 +1,5 @@
 ## SASS or SCSS - Date:09/02/14
+![The San Juan Mountains are beautiful!](https://raw.githubusercontent.com/mohinranait/scss-or-sass/main/day-2/Screenshot_5.png "San Juan Mountains")
 
 
 - Conditionallay style using @if,  @else 
