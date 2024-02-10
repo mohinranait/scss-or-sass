@@ -4,6 +4,7 @@ import './PostForm.scss'
 import { useDispatch } from 'react-redux';
 import { addPosts, updatePost } from '../../features/posts/postSlice';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const PostForm = ({post}) => {
     const navigate = useNavigate();
@@ -16,10 +17,13 @@ const PostForm = ({post}) => {
         const title = form.title.value;
         const description = form.description.value;
        
-      
+        if(!title) return toast.warning("Title is required");
+        if(!description) return toast.warning("Description is required");
+        
 
         if(!post){
             const author = form.author.value;
+            if(!author) return toast.warning("Author is required");
             dispatch(addPosts({title,author, description}))
         }else{
             dispatch(updatePost({
