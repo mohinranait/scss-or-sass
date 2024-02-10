@@ -1,0 +1,23 @@
+
+
+header{
+    border-bottom: 1px solid black;
+    background-color: black;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+nav .nav-groups{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    li{
+        .navitem{
+            padding: 10px 15px;
+        }
+    }
+}

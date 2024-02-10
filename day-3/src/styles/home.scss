@@ -1,0 +1,29 @@
+
+
+.card-section{
+    margin: 50px 0;
+}
+.card-grids{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+
+}
+
+@media screen and (max-width:992px) {
+    .card-grids{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    
+    }
+}
+
+@media screen and (max-width:768px) {
+    .card-grids{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    
+    }
+}

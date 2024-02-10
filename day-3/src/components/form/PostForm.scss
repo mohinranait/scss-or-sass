@@ -1,0 +1,14 @@
+
+.postForm{
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+   label{
+    font-size: 12px;
+    font-weight: 600;
+   }
+   .formtitle{
+    font-size: 18px;
+    font-weight: 600;
+   }
+}
