@@ -4,10 +4,9 @@ import React, { useEffect, useState } from 'react';
 
 const HomePage = () => {
     const [posts, setPosts] = useState([]);
-    const [search,setSearch] = useState('mohin')
     useEffect(() => {
         const getPosts = async () => {
-            const res = await fetch(`/api/post?search=${encodeURIComponent(search)}&sort=asc`,{
+            const res = await fetch(`/api/post`,{
                 method: "GET",
             })
             const posts = await res.json();

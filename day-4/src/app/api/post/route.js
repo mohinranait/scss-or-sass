@@ -1,8 +1,9 @@
 
 
-import connectionDb from "@/config/connectDb";
+
 import { NextResponse } from "next/server";
 import Post from "../../../../models/PostMode";
+import connectionDb from "@/config/connectDb";
 
 export async function POST(req) {
     try {
