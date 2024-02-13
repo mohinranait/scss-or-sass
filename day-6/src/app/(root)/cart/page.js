@@ -11,7 +11,7 @@ const ShoppingCard = () => {
     const {carts} = useSelector(state => state.carts);
     const dispatch = useDispatch();
     return (
-        <PrivaterRoute>
+    
             <section className='my-10'>
                 <div className='container'>
                     <div className='bg-white lg:w-[850px] mx-auto p-3 md:p-10 rounded'>
@@ -65,7 +65,7 @@ const ShoppingCard = () => {
                     </div>
                 </div>
             </section>  
-        </PrivaterRoute>
+     
     );
 };
 

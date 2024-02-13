@@ -4,7 +4,7 @@ import React from 'react';
 
 const CreateProduct = () => {
     return (
-        <PrivaterRoute>
+        <>
             <section className='my-10'>
                 <div className="container">
                     <div className='lg:w-[600px] mx-auto bg-white p-6 rounded'>
@@ -12,7 +12,7 @@ const CreateProduct = () => {
                     </div>
                 </div>
             </section>
-        </PrivaterRoute>
+        </>
         
     );
 };
