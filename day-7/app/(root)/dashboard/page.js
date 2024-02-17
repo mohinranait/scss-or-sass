@@ -4,7 +4,7 @@ import React from 'react';
 
 const Dashboard = () => {
     const {data:session} = useSession();
-
+    console.log(session);
     return (
         <div className="grid place-items-center h-screen">
             <div className="shadow-lg p-5 bg-white rounded-lg border-t-4 border-green-400">

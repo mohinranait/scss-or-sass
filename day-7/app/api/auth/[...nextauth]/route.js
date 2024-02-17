@@ -5,6 +5,18 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 
 export const authOptions = {
+  callbacks: {
+    async jwt(token, user) {
+      // If the user is logging in, add user information to token payload
+      if (user) {
+        token.name = user.name;
+        token.email = user.email;
+        token.role = user.role;
+      }
+      return token;
+    },
+  },
+
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -38,9 +50,13 @@ export const authOptions = {
     strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
+  jwt: {
+    signingKey: process.env.JWT_SIGNING_PRIVATE_KEY, 
+  },
   pages: {
     signIn: "/login",
   },
+  
 };
 
 const handler = NextAuth(authOptions);
