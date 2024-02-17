@@ -4,18 +4,25 @@ import TaskCard from '../components/tasks/TaskCard';
 import Modal from '../components/modal/Modal';
 import { useState } from 'react';
 import AddTask from '../components/form/AddTask';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { authUser } from '../redux/features/users/userSlice';
 
 const Tasks = () => {
   let [isOpen, setIsOpen] = useState(false)
   
 
   const {tasks} = useSelector(state => state.tasksSlice);
-  const {user} = useSelector(state => state.userSlice);
+  const {user,users} = useSelector(state => state.userSlice);
   const ownerTasks = tasks.filter(x => x.assignedTo == user?.name)
   const pendingTasks = ownerTasks.filter(x => x.status == 'pending');
   const progressTasks = ownerTasks.filter(x => x.status == 'progress');
   const doneTasks = ownerTasks.filter(x => x.status == 'done');
+  const dispatch = useDispatch();
+
+  const handleLoginUser = (e) => {
+    const logInUser = users?.find(x => x.name === e.target.value)
+    dispatch(authUser(logInUser))
+  }
 
   return (
     <div className="h-screen grid grid-cols-12">
@@ -25,6 +32,15 @@ const Tasks = () => {
             <h1 className="font-semibold text-3xl">Tasks</h1>
           </div>
           <div className="flex gap-5">
+            <div className='flex gap-1 items-center'>
+              Select User
+              <select name="" onChange={handleLoginUser} className='rounded' id="">
+                {
+                  users?.map(item => <option key={item?.id} value={item?.name}>{item?.name}</option> )
+                }
+               
+              </select>
+            </div>
             <button className="border-2 border-secondary/20 hover:border-primary hover:bg-primary rounded-xl h-10 w-10  grid place-content-center text-secondary hover:text-white transition-all">
               <MagnifyingGlassIcon className="h-6 w-6" />
             </button>
@@ -74,7 +90,7 @@ const Tasks = () => {
           </div>
           <div className="relative h-[800px] overflow-auto">
             <div className="flex sticky top-0 justify-between bg-[#D3DDF9] p-5 rounded-md mb-3">
-              <h1>Up Next</h1>
+              <h1>Complete</h1>
               <p className="bg-primary text-white w-6 h-6 grid place-content-center rounded-md">
                 {doneTasks?.length}
               </p>
