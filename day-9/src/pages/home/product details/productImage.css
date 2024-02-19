@@ -1,0 +1,7 @@
+.react-responsive-carousel .carousel .thumb img,
+.react-responsive-carousel .carousel .slide img {
+    height: 200px !important;
+
+    object-fit: cover;
+
+}
