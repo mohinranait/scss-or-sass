@@ -1,8 +1,11 @@
-# React + Vite
+# Redux RTK Query
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Worked on Redux's RTK query and group project's cards and detail pages.
 
-Currently, two official plugins are available:
+Date: 23/02/2024
+- I watched ACC course for 2 hours. (Redux RTK Query)
+- These videos cannot be shared.
+- [Live Link](https://kaleidoscopic-rugelach-8cf95b.netlify.app)
+- [GitHub](https://github.com/mohinranait/scss-or-sass/tree/main/day-10)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+

@@ -6,6 +6,8 @@ import Posts from '../pages/Posts';
 import PostDetails from '../pages/PostDetails';
 import Users from '../pages/Users';
 import UserDetails from '../pages/UserDetails';
+import Comments from '../pages/Comments';
+import Comment from '../pages/Comment';
 
 const myRoutes = createBrowserRouter([
     {
@@ -31,6 +33,14 @@ const myRoutes = createBrowserRouter([
             {
                 path: '/users/:id',
                 element : <UserDetails />,
+            },
+            {
+                path: '/comments',
+                element : <Comments />,
+            },
+            {
+                path: '/comments/:id',
+                element : <Comment />,
             },
         ]
     }

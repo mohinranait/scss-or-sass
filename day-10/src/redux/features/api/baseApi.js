@@ -18,10 +18,16 @@ const baseApi = createApi({
         getUserById : builder.query({
             query: (id) => `/users/${id}`,
         }),
+        getComments : builder.query({
+            query: () => "/comments",
+        }),
+        getCommentById : builder.query({
+            query: (id) => `/comments/${id}`,
+        }),
     })
 })
 
-export const {useGetPostsQuery,useGetSinglePostsByIdQuery, useGetUsersQuery, useGetUserByIdQuery} = baseApi;
+export const {useGetCommentsQuery,useGetCommentByIdQuery,useGetPostsQuery,useGetSinglePostsByIdQuery, useGetUsersQuery, useGetUserByIdQuery} = baseApi;
 
 
 export default baseApi
